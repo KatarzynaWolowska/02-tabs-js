@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: #f2f5f7;
+  color: #474747;
+  margin: 0;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-weight: 500;
+}
+
+p {
+  font-size: 16px;
+  line-height: 24px;
+  text-align: justify;
+}
+
+#containerForTabs {
+  padding: 40px;
+  border-radius: 5px;
+  margin: 40px 0;
+}
+#containerForTabs ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  border-bottom: 1px solid #dedede;
+  overflow-x: scroll;
+}
+#containerForTabs ul li {
+  display: flex;
+  padding: 0px;
+  width: 100%;
+}
+#containerForTabs ul button {
+  background: none;
+  border: none;
+  outline: none;
+  color: #474747;
+  opacity: 0.8;
+  cursor: pointer;
+  font-size: 16px;
+  position: relative;
+  padding: 20px;
+  width: 100%;
+  transition: 0.3s all ease-in;
+}
+#containerForTabs ul button:hover, #containerForTabs ul button:focus {
+  opacity: 0.5;
+}
+#containerForTabs ul button:active {
+  transform: scale(0.9);
+  transition-duration: 500ms;
+}
+#containerForTabs ul button.active {
+  opacity: 1;
+  font-weight: 700;
+}
+#containerForTabs ul button:after {
+  content: "";
+  height: 3px;
+  width: 100%;
+  position: absolute;
+  display: block;
+  background: #ccc;
+  bottom: 0;
+  opacity: 0;
+  left: 0;
+  transition: 0.25s ease;
+}
+#containerForTabs ul button:hover::after {
+  opacity: 1;
+}
+#containerForTabs ul button.active::after {
+  opacity: 1;
+  background: #474747;
+}
+#containerForTabs .tabsContent {
+  position: relative;
+}
+#containerForTabs .tabItemContent {
+  display: none;
+}
+#containerForTabs .tabItemContent.active {
+  display: block;
+}/*# sourceMappingURL=styles.css.map */
