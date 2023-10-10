@@ -1,6 +1,8 @@
+import showTabContent from './showTabContent.js'
+
 function createTabItem(id, label) {
-	let li = document.createElement('li')
-	let btn = document.createElement('button')
+	const li = document.createElement('li')
+	const btn = document.createElement('button')
 
 	btn.type = 'button'
 	btn.id = id
@@ -8,6 +10,10 @@ function createTabItem(id, label) {
 	btn.role = 'tab'
 	btn.textContent = label
 	btn.setAttribute('aria-selected', false)
+
+	btn.addEventListener('click', e => {
+		showTabContent(e.target.id)
+	})
 
 	li.appendChild(btn)
 

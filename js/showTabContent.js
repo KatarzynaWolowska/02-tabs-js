@@ -1,6 +1,6 @@
 const showTabContent = id => {
-	let allTabs = document.querySelectorAll('#containerForTabs .tab')
-	let allTabsContent = document.querySelectorAll('#containerForTabs .tabItemContent')
+	const allTabs = document.querySelectorAll('#containerForTabs .tab')
+	const allTabsContent = document.querySelectorAll('#containerForTabs .tabItemContent')
 
 	allTabs.forEach(tab => {
 		tab.classList.remove('active')

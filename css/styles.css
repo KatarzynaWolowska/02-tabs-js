@@ -41,8 +41,13 @@ p {
   display: flex;
   justify-content: space-between;
   padding: 0;
+  margin-bottom: 30px;
   border-bottom: 1px solid #dedede;
-  overflow-x: scroll;
+}
+@media only screen and (max-width: 768px) {
+  #containerForTabs ul {
+    overflow-x: scroll;
+  }
 }
 #containerForTabs ul li {
   display: flex;
@@ -91,9 +96,6 @@ p {
 #containerForTabs ul button.active::after {
   opacity: 1;
   background: #474747;
-}
-#containerForTabs .tabsContent {
-  position: relative;
 }
 #containerForTabs .tabItemContent {
   display: none;
